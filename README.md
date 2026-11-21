@@ -22,10 +22,12 @@ Couper le bureau libère plusieurs centaines de Mo de RAM, utile sur un RPi 3B+ 
 ## Installation
 
 ```bash
-mkdir -p ~/domoticz/plugins/BureauRPi
-cp plugin.py ~/domoticz/plugins/BureauRPi/plugin.py
+cd ~/domoticz/plugins
+git clone https://github.com/xavloco/BureauRPi.git
 sudo systemctl restart domoticz
 ```
+
+Mise à jour : `cd ~/domoticz/plugins/BureauRPi && git pull`, puis `sudo systemctl restart domoticz`.
 
 Dans Domoticz : **Réglages > Matériel**, ajouter le type **« Bureau Raspberry Pi (allumer / couper) »**, régler les durées proposées (`1,2,4` par défaut), puis **Ajouter**.
 
